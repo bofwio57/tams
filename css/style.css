@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+/* ------------ 기본 ------------ */
+@import "reset.css";
+@import "main.css";
+
+/* ------------ pretendard ------------ */
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+
+/* ------------ 메인 색상 ------------ */
+:root {
+    --page-color-body: #f0f0f0;
+    --page-color-point: #eb9914;
+}
+
+.clearfix {
+    zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+    display: block;
+    content: "";
+    line-height: 0;
+}
+.clearfix:after {
+    clear: both;
+}
+
+/* ------------ 공통 ------------ */
+body {
+    font-family: "Pretendard Variable", sans-serif;
+    overflow-x: hidden;
+    font-size: 16px;
+    background: var(--page-color-body);
+}
+
+/* ------------ 미디어쿼리 ------------ */
+@media (max-width: 991px) {
+}
+@media (max-width: 767px) {
+}
+@media (max-width: 576px) {
+}

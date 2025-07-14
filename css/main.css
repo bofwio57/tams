@@ -1,0 +1,178 @@
+main {
+    margin: 0 auto;
+    max-width: 500px;
+}
+main section {
+}
+
+.se01 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+.video-container {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.video-container::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #000;
+    opacity: 0;
+    z-index: 1;
+}
+.video-container video {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* ------------ main-checkbox ------------ */
+.main-checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    z-index: 1;
+    border-radius: 5px;
+    border: 1px solid #7f7f7f8c;
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    background: #dedede;
+    padding: 13px 20px;
+    width: 220px;
+    transition: all 0.5s;
+    opacity: 1;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+.main-checkbox input {
+    margin: 0;
+    width: 17px;
+    height: 17px;
+}
+.main-checkbox p {
+    margin-left: 13px;
+    font-size: 14px;
+}
+.main-checkbox img {
+    height: 45px;
+    margin-left: auto;
+}
+.main-checkbox.checked {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* ------------ select-container ------------ */
+.select-container {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    width: 350px;
+    background: #fff;
+    z-index: 1;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    transition: all 0.5s;
+    opacity: 0;
+    pointer-events: none;
+}
+.select-container.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+.select-container .txt-area {
+    background: var(--page-color-point);
+    padding: 15px;
+    margin-bottom: 5px;
+    margin: 5px;
+}
+.select-container .txt-area .name {
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+.select-container .txt-area p {
+    font-size: 14px;
+    color: #fff;
+    line-height: 1.2;
+}
+.select-container .img-area {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3px;
+    padding: 5px;
+    padding-top: 0;
+    border-bottom: 1px solid #ddd;
+}
+.select-container .img-box {
+    position: relative;
+    cursor: pointer;
+}
+.select-container .img-box::before {
+    content: "\e86c";
+    font-family: "Material Symbols Outlined";
+    font-size: 30px;
+    color: var(--page-color-point);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    font-variation-settings: "FILL" 1;
+    transition: all 0.3s;
+    opacity: 0;
+    z-index: 1;
+}
+.select-container .img-box.active::before {
+    opacity: 1;
+}
+.select-container .img-box img {
+    width: 100%;
+    transition: all 0.3s;
+}
+.select-container .img-box.active img {
+    scale: 0.8;
+}
+.btn-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5px;
+}
+.info-btn {
+    display: flex;
+    gap: 10px;
+}
+.info-btn span {
+    opacity: 0.6;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.info-btn span:hover {
+    opacity: 1;
+}
+.skip-btn {
+    background: var(--page-color-point);
+    padding: 11px 30px;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.skip-btn:hover {
+    background: #db8e11;
+}
+.info-btn span:nth-child(2) {
+    font-variation-settings: "FILL" 1;
+}

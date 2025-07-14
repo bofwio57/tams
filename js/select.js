@@ -1,0 +1,7 @@
+const imgBox = document.querySelectorAll(".select-container .img-box");
+
+imgBox.forEach((btn) => {
+    btn.addEventListener("click", () => {
+        btn.classList.toggle("active");
+    });
+});
