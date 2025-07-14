@@ -5,3 +5,6 @@ imgBox.forEach((btn) => {
         btn.classList.toggle("active");
     });
 });
+
+const video = document.querySelector("video");
+video.controls = false;
