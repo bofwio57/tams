@@ -80,6 +80,7 @@ video::-webkit-media-controls-mute-button {
     width: 450px;
     display: block;
     font-size: 24px;
+    font-weight: 500;
     color: #fff;
 }
 .main-checkbox input {
