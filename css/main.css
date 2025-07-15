@@ -1,11 +1,12 @@
 main {
     margin: 0 auto;
     max-width: 500px;
+}
+#main-wrapper {
     height: 100svh;
     overflow: hidden;
 }
-
-.se01 {
+#main-wrapper .se01 {
     position: relative;
     width: 100%;
     height: 100svh;
